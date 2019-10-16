@@ -18,7 +18,7 @@ const Form = (props) => {
 	return (
 		<form onSubmit={submitForm}>
 			<label htmlFor='name'>Name</label>
-			<input name='name' id='name' type='name' placeholder='name' onChange={ChangeHandler} value={form.name} />
+			<input name='name' id='name' type='name' placeholder='Name' onChange={ChangeHandler} value={form.name} />
 			<label htmlFor='email'>Email</label>
 			<input
 				name='email'
@@ -29,7 +29,14 @@ const Form = (props) => {
 				value={form.email}
 			/>
 			<label htmlFor='role'>Role</label>
-			<textarea name='role' id='role' placeholder='role' onChange={ChangeHandler} value={form.role} />
+			<textarea
+				name='role'
+				id='role'
+				placeholder='Backend, Frontend, Designer'
+				onChange={ChangeHandler}
+				value={form.role}
+			/>
+			<button type='submit'>Add Team Member</button>
 		</form>
 	);
 };
